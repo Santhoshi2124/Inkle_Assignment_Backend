@@ -66,23 +66,6 @@ This project is built to simulate a backend for a social platform where users ca
 
 ---
 
-## 🏗️ Architecture
-
-### Data Flow
-```mermaid
-flowchart LR
-  Client[Client / Postman] -->|HTTP JSON + JWT| API_Server((Express API))
-  API_Server --> AuthMiddleware
-  API_Server --> PostController
-  API_Server --> UserController
-  API_Server --> AdminController
-  API_Server --> ActivityController
-  API_Server --> MongoDB[(MongoDB Atlas)]
-  MongoDB --> Collections[Users, Posts, Activities]
-  API_Server --> MongoDB[(MongoDB Atlas)]
-  MongoDB --> Collections[Users, Posts, Activities]
-```
----
 
 ## 📚 API Reference
 **Base URL:** `/api`
@@ -127,6 +110,23 @@ flowchart LR
 | **POST** | `/admin/demote/:id` | Revoke Admin access | Owner Only |
 | **DELETE** | `/admin/users/:id` | Soft-delete a user | Admin/Owner |
 
+---
+## 🏗️ Architecture
+
+### Data Flow
+```mermaid
+flowchart LR
+  Client[Client / Postman] -->|HTTP JSON + JWT| API_Server((Express API))
+  API_Server --> AuthMiddleware
+  API_Server --> PostController
+  API_Server --> UserController
+  API_Server --> AdminController
+  API_Server --> ActivityController
+  API_Server --> MongoDB[(MongoDB Atlas)]
+  MongoDB --> Collections[Users, Posts, Activities]
+  API_Server --> MongoDB[(MongoDB Atlas)]
+  MongoDB --> Collections[Users, Posts, Activities]
+```
 ---
 
 ## 🧪 Testing Checklist (Thunder Client / Postman)
