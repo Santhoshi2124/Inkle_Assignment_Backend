@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
-const { follow, unfollow, block, getFeed, getProfile, updateMe } = require('../controllers/userController');
+const { follow, unfollow, block, getFeed, getProfile, updateMe } = require('../controllers/usercontroller');
 
 router.get('/:id', auth, getProfile);
 router.put('/me', auth, updateMe);
