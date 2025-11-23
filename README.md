@@ -6,7 +6,7 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-forestgreen.svg)
 ![Status](https://img.shields.io/badge/Status-Deployed-blue.svg)
 
-A robust **Node.js + Express + MongoDB** backend implementing a social media feed with sophisticated **Role-Based Access Control (RBAC)**. The system handles users, posts, and social interactions while maintaining a global activity log.
+A robust **Node.js + Express + MongoDB Atlas** backend implementing a social media feed with sophisticated **Role-Based Access Control (RBAC)**. The system handles users, posts, and social interactions while maintaining a global activity log.
 
 ---
 
